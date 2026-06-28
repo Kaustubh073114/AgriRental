@@ -1,0 +1,61 @@
+.hero {
+  background: var(--green-dark);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -80px; right: -80px;
+  width: 350px; height: 350px; border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 4px 14px; border-radius: 20px; margin-bottom: 1.25rem;
+}
+.hero h1 { font-size: 2.8rem; color: #fff; margin-bottom: 1rem; }
+.hero p { color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 2rem; font-size: 15px; line-height: 1.7; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-white { background: #fff; color: var(--green-dark); }
+.btn-white:hover { background: var(--green-light); }
+.btn-outline-white { background: transparent; border: 1.5px solid rgba(255,255,255,0.6); color: #fff; }
+.btn-outline-white:hover { background: rgba(255,255,255,0.1); }
+.hero-stats {
+  display: flex; justify-content: center; gap: 3rem;
+  margin-top: 3rem; padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.stat-n { display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #fff; }
+.stat-l { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; display: block; }
+
+.section-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-mid); margin-bottom: .5rem; }
+.section-h { font-size: 1.7rem; margin-bottom: 1.5rem; color: var(--green-dark); }
+.how-section { padding-top: 3rem; padding-bottom: 3rem; }
+.step-card { text-align: center; }
+.step-icon { font-size: 2rem; margin-bottom: .5rem; }
+.step-num { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--green-mid); margin-bottom: .5rem; }
+.step-card h3 { margin-bottom: .5rem; font-size: 1rem; }
+.step-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+.role-section { background: var(--gray-200); padding: 3rem 0; }
+.role-card { border-top: 3px solid; }
+.role-green { border-color: var(--green); }
+.role-amber { border-color: var(--amber); }
+.role-teal  { border-color: var(--teal); }
+.role-icon { font-size: 2rem; margin-bottom: .75rem; }
+.role-card h3 { margin-bottom: 1rem; }
+.role-card ul { list-style: none; }
+.role-card ul li { font-size: 13px; color: var(--gray-600); padding: 4px 0; }
+
+.footer { text-align: center; padding: 2rem; font-size: 13px; color: var(--gray-400); border-top: 0.5px solid var(--border); }
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.9rem; }
+  .hero-stats { gap: 1.5rem; }
+  .steps-grid { grid-template-columns: 1fr; }
+}

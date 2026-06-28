@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+const { protect, adminOnly } = require('../middleware/authMiddleware');
+const ctrl = require('../controllers/adminController');
+router.use(protect, adminOnly);
+router.get('/users', ctrl.getAllUsers);
+router.put('/users/:id/verify', ctrl.verifyUser);
+router.put('/users/:id/ban', ctrl.banUser);
+router.get('/equipment/pending', ctrl.getPendingEquipment);
+router.put('/equipment/:id/verify', ctrl.verifyEquipment);
+router.get('/bookings', ctrl.getAllBookings);
+router.get('/stats', ctrl.getStats);
+module.exports = router;

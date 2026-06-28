@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green: #3B6D11;
+  --green-dark: #27500A;
+  --green-light: #EAF3DE;
+  --green-mid: #639922;
+  --amber: #BA7517;
+  --amber-light: #FAEEDA;
+  --teal: #0F6E56;
+  --teal-light: #E1F5EE;
+  --red: #A32D2D;
+  --red-light: #FCEBEB;
+  --gray-100: #f8f8f6;
+  --gray-200: #efefec;
+  --gray-400: #888780;
+  --gray-600: #5F5E5A;
+  --border: rgba(0,0,0,0.1);
+  --shadow: 0 2px 12px rgba(0,0,0,0.07);
+  --radius: 10px;
+  --radius-lg: 14px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--gray-100);
+  color: #1a1a18;
+  min-height: 100vh;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+
+.page { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+.page-title { font-size: 1.9rem; margin-bottom: 1.5rem; color: var(--green-dark); }
+
+.card {
+  background: #fff;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-decoration: none;
+}
+.btn-primary { background: var(--green); color: #fff; }
+.btn-primary:hover { background: var(--green-dark); }
+.btn-secondary { background: transparent; border: 1px solid var(--green); color: var(--green); }
+.btn-secondary:hover { background: var(--green-light); }
+.btn-danger { background: var(--red-light); color: var(--red); border: 1px solid var(--red); }
+.btn-danger:hover { background: var(--red); color: #fff; }
+.btn-amber { background: var(--amber-light); color: var(--amber); border: 1px solid var(--amber); }
+.btn-sm { padding: 6px 14px; font-size: 12px; }
+
+.form-group { margin-bottom: 1.1rem; }
+.form-group label { display: block; font-size: 13px; color: var(--gray-600); margin-bottom: 5px; font-weight: 500; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition: border 0.15s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--green); }
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+.badge-pending  { background: var(--amber-light); color: var(--amber); }
+.badge-accepted { background: var(--teal-light); color: var(--teal); }
+.badge-rejected { background: var(--red-light); color: var(--red); }
+.badge-paid     { background: var(--green-light); color: var(--green); }
+.badge-completed{ background: #e8e8f0; color: #444; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+
+.loading { display: flex; justify-content: center; align-items: center; min-height: 200px; color: var(--gray-400); font-size: 14px; }
+.error-msg { background: var(--red-light); color: var(--red); padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 1rem; }
+.success-msg { background: var(--green-light); color: var(--green); padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 1rem; }
+
+.star { color: var(--amber); }
+.empty { text-align: center; padding: 3rem; color: var(--gray-400); font-size: 14px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-weight: 500; color: var(--gray-600); }
+td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .page { padding: 1rem; }
+}

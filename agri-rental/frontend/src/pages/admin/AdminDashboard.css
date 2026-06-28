@@ -1,0 +1,10 @@
+.admin-stat-card { text-align: center; cursor: pointer; transition: transform 0.18s; border-top: 3px solid; }
+.admin-stat-card:hover { transform: translateY(-3px); }
+.color-teal  { border-color: var(--teal); }
+.color-green { border-color: var(--green); }
+.color-amber { border-color: var(--amber); }
+.admin-stat-icon { font-size: 1.6rem; margin-bottom: .5rem; }
+.admin-stat-val { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--green-dark); }
+.admin-stat-lbl { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+.quick-card { }
+.quick-icon { font-size: 1.6rem; margin-bottom: .75rem; }
